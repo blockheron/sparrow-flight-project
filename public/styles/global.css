@@ -1,0 +1,93 @@
+a{
+	color:#ff9100;
+}
+
+nav {
+    margin-top:20px;
+    text-align: center;
+}
+
+nav a {
+    margin:0px 5px;
+    display: inline-block;
+    text-align: center;
+    list-style-type: none;
+}
+
+.footer-text a{
+	margin:0px 5px;
+    display: inline-block;
+}
+
+iframe {
+    display: block;
+    border-style: none;
+    margin: auto;
+}
+
+body{
+	font-family: Garamond, serif;
+	margin: auto;
+	padding:18px;
+	max-width: 600px;
+	font-size:18px;
+	text-align: left;
+	background-color:white;
+	position: relative;
+}
+
+.ph-banner{
+	font-family: Garamond, serif;
+	background-color: black;
+	color: white;
+	padding: 4px;
+	margin-bottom: 4px;
+	text-align: center;
+}
+
+#dark-button{
+	margin-bottom: 8px;
+	position: relative;
+	left: 100%;
+	transform: translateX(-100%);
+}
+
+.dark{
+	color:#f9f9f9;
+	background-color: #222;
+}
+
+img, video{
+	max-width: 600px;
+}
+
+.emoji{
+	font-weight: initial !important;
+}
+
+.mastfoot{
+	display: none !important;
+}
+
+/* input[type="submit"]{
+	color: white !important;
+	background-color: #eba613 !important;
+	border-color: initial !important;
+	font-family: Garamond, serif !important;
+}
+
+input[type="email"]{
+	color: initial !important;
+	background-color: initial !important;
+	font-size: initial !important;
+	margin:  initial !important;
+	font-family: Garamond, serif !important;
+}
+
+.emailoctopus-success-message{
+	font-family: Garamond, serif !important;
+}
+
+.grecaptcha-badge{
+	display: none !important;
+} */
