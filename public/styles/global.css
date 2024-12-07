@@ -1,5 +1,5 @@
 a{
-	color:#ff9100;
+	color:#ff6600;
 }
 
 nav {
@@ -9,12 +9,13 @@ nav {
 
 nav a {
     margin:0px 5px;
+	font-size: 18px;
     display: inline-block;
     text-align: center;
     list-style-type: none;
 }
 
-.footer-text a{
+.footer-text a {
 	margin:0px 5px;
     display: inline-block;
 }
@@ -23,26 +24,39 @@ iframe {
     display: block;
     border-style: none;
     margin: auto;
+	max-width: 100%;
 }
 
-body{
+.iframe-header {
+	height: 70px;
+}
+
+body {
 	font-family: Garamond, serif;
 	margin: auto;
 	padding:18px;
 	max-width: 600px;
 	font-size:18px;
-	text-align: left;
 	background-color:white;
 	position: relative;
 }
 
-.ph-banner{
-	font-family: Garamond, serif;
-	background-color: black;
-	color: white;
-	padding: 4px;
-	margin-bottom: 4px;
-	text-align: center;
+img, video{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+}
+
+/* mobile mode */
+@media only screen and (max-width: 767px) {
+	.iframe-header {
+		height: 82px;
+	}
+
+	body {
+		font-size: 20px;
+	}
 }
 
 #dark-button{
@@ -54,19 +68,7 @@ body{
 
 .dark{
 	color:#f9f9f9;
-	background-color: #222;
-}
-
-img, video{
-	max-width: 600px;
-}
-
-.emoji{
-	font-weight: initial !important;
-}
-
-.mastfoot{
-	display: none !important;
+	background-color: #212145;
 }
 
 /* input[type="submit"]{
