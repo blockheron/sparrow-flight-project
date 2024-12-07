@@ -1,23 +1,43 @@
-a{
+@font-face {
+	font-family: Ansichtkaart;
+	src: url(Ansichtkaartdemo-lGmX.otf);
+}
+
+h1 {
+	font-family: Ansichtkaart;
+	font-size: 80px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	color:#ffae3d;
+}
+
+a { 
 	color:#ff6600;
 }
 
+a:hover { 
+	color:#ffae3d;
+}
+
 nav {
-    margin-top:20px;
+	margin-top:20px;
     text-align: center;
 }
 
 nav a {
-    margin:0px 5px;
-	font-size: 18px;
+	margin:0px 8px;
+	font-size: 19px;
     display: inline-block;
     text-align: center;
-    list-style-type: none;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 1.8;
 }
 
 .footer-text a {
-	margin:0px 5px;
+	margin:0px 8px;
     display: inline-block;
+	text-decoration: none;
 }
 
 iframe {
@@ -34,11 +54,21 @@ iframe {
 body {
 	font-family: Garamond, serif;
 	margin: auto;
-	padding:18px;
+	padding: 18px;
 	max-width: 600px;
-	font-size:18px;
-	background-color:white;
+	color:#f9f9f9;
+	background-color:#18182e;
 	position: relative;
+}
+
+p {
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+.tagline {
+	color:#ffae3d;
+	margin-bottom: 25px;
 }
 
 img, video{
@@ -46,29 +76,34 @@ img, video{
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 100%;
+	object-fit: contain;
 }
 
 /* mobile mode */
 @media only screen and (max-width: 767px) {
 	.iframe-header {
-		height: 82px;
+		height: 95px;
 	}
 
-	body {
-		font-size: 20px;
+	h1 {
+		margin-top: 50px;
 	}
+
+	/* body {
+		font-size: 20px;
+	} */
 }
 
-#dark-button{
+#dark-button {
 	margin-bottom: 8px;
 	position: relative;
 	left: 100%;
 	transform: translateX(-100%);
 }
 
-.dark{
+.dark {
 	color:#f9f9f9;
-	background-color: #212145;
+	background-color: #11111a;
 }
 
 /* input[type="submit"]{
