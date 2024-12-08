@@ -51,6 +51,23 @@ iframe {
 	height: 70px;
 }
 
+.story-title {
+	font-size: 40px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.story-nav {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.story-nav a {
+	color:#ffae3d;
+}
+
 body {
 	font-family: Garamond, serif;
 	margin: auto;
@@ -89,9 +106,9 @@ img, video{
 		margin-top: 50px;
 	}
 
-	/* body {
-		font-size: 20px;
-	} */
+	.story-nav {
+		width: 80%;
+	}
 }
 
 #dark-button {
