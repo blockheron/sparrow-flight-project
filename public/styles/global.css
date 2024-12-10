@@ -83,6 +83,10 @@ p, li {
 	line-height: 1.2;
 }
 
+.indented {
+    text-indent: 50px;
+}
+
 .tagline {
 	color:#ffae3d;
 	margin-bottom: 25px;
