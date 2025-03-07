@@ -8,7 +8,7 @@
 h1 {
 	font-family: Ansichtkaart;
 	font-size: 80px;
-	margin-top: 20px;
+	margin-top: 0px;
 	margin-bottom: 0px;
 	color:#ffae3d;
 }
@@ -27,30 +27,43 @@ nav {
 }
 
 nav a {
-	margin:0px 8px;
+	margin:8px 12px;
 	font-size: 19px;
     display: inline-block;
     text-align: center;
 	text-decoration: none;
 	font-weight: bold;
-	line-height: 1.8;
+	line-height: 1.5;
+}
+
+.footer-text {
+	display: block;
+	max-width: 600px;
+	margin: auto;
 }
 
 .footer-text a {
 	margin:0px 8px;
+	line-height: 1.8;
     display: inline-block;
 	text-decoration: none;
 }
 
 iframe {
-    display: block;
+	display: block;
     border-style: none;
     margin: auto;
-	max-width: 100%;
+	width: 100%;
 }
 
 .iframe-header {
-	height: 50px;
+	display: block;
+	height: 360px;
+}
+
+.iframe-footer {
+	display: block;
+	height: 434px;
 }
 
 .story-title {
@@ -73,11 +86,15 @@ iframe {
 body {
 	font-family: Garamond, "EB Garamond", serif;
 	margin: auto;
-	padding: 18px;
-	max-width: 600px;
 	color:#f9f9f9;
 	background-color:#18182e;
 	position: relative;
+}
+
+.container {
+	padding: 18px;
+	max-width: 600px;
+	margin: auto;
 }
 
 p, li {
@@ -94,7 +111,8 @@ p, li {
 	margin-bottom: 25px;
 }
 
-img, video{
+/* art in stories are put into containers */
+.container img, video {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -102,18 +120,122 @@ img, video{
 	object-fit: contain;
 }
 
+/* portrait images span half width of desktop, but full width of mobile */
+.portrait {
+	display: block;
+	margin: auto;
+	max-width: 50%;
+}
+
+/* landscape images always span full width on all devices */
+.landscape {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+
+.gallery {
+	margin: auto;
+	margin-top: 20px;
+	max-width: 800px;
+}
+
+.gallery td {
+	width: 33%;
+}
+
+/* wraps each (portrait) gallery image for 'automatic square cropping' */
+.gallery-tile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	aspect-ratio: 1/1;
+	overflow: hidden;
+}
+
+.gallery-tile img {
+	display: block;
+	margin: auto;
+	width: 100%;
+	object-fit: contain;
+}
+
+/* landspace images need veritcal cropping (aka why absolute position is needed) */
+.gallery-tile-hor {
+	aspect-ratio: 1/1;
+	overflow: hidden;
+	position: relative;
+}
+
+.gallery-tile-hor img {
+	display: block;
+	margin: auto;
+	height: 100%;
+	object-fit: contain;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.spotify {
+	margin: auto;
+	width: 50%;
+}
+
+.banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	margin: 0px;
+}
+
+.banner img {
+	flex-shrink: 0;
+	display: block;
+	max-width: none;
+	object-fit: cover;
+	object-position: center;
+}
+
+.footer-banner {
+	display: block;
+	background-image: url("../img/footer.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	/* background-size: 100%; */
+	max-width: none;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /* mobile mode */
 @media only screen and (max-width: 767px) {
 	.iframe-header {
-		height: 95px;
+		height: 380px;
 	}
 
-	h1 {
-		margin-top: 50px;
+	.iframe-footer {
+		height: 430px;
 	}
+
+	/* h1 {
+		margin-top: 0;
+	} */
 
 	.story-nav {
 		width: 80%;
+	}
+
+	.portrait {
+		max-width: 100%;
+	}
+
+	.spotify{
+		width: 90%;
 	}
 }
 
