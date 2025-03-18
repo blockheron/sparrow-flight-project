@@ -37,7 +37,7 @@ nav a {
 }
 
 .footer-text {
-	display: block;
+	/* display: block; */
 	max-width: 600px;
 	margin: auto;
 }
@@ -199,15 +199,26 @@ p, li {
 	object-position: center;
 }
 
-.footer-banner {
+.start-story {
 	display: block;
+	/* background-image: url("../img/buttons.png"); */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto;
+	margin: auto;
+	height: 100%;
+	padding: 18px;
+}
+
+.footer-banner {
+	/* display: block; */
+	display: flex;
 	background-image: url("../img/footer.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	/* background-size: 100%; */
-	max-width: none;
+	max-width: 100%;
 	overflow: hidden;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -215,7 +226,7 @@ p, li {
 /* mobile mode */
 @media only screen and (max-width: 767px) {
 	.iframe-header {
-		height: 380px;
+		height: 400px;
 	}
 
 	.iframe-footer {
