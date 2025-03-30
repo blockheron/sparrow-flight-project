@@ -36,6 +36,27 @@ nav a {
 	line-height: 1.5;
 }
 
+button {
+	background-color: transparent;
+	color: #f9f9f9;
+	font-family: Garamond, "EB Garamond", serif;
+	border: 2px solid #f9f9f9;
+	font-size: 20px;
+	padding: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+button:hover {
+	color: #ffae3d;
+	border: 2px solid #ffae3d;
+}
+
+button:disabled {
+	color: #ffae3d;
+	border: 2px solid #ffae3d;
+  }
+
 .footer-text {
 	/* display: block; */
 	max-width: 600px;
@@ -91,9 +112,15 @@ body {
 	position: relative;
 }
 
-.container {
+.container-story {
 	padding: 18px;
 	max-width: 600px;
+	margin: auto;
+}
+
+.container {
+	padding: 18px;
+	max-width: 800px;
 	margin: auto;
 }
 
@@ -106,12 +133,26 @@ p, li {
     text-indent: 50px;
 }
 
+.block {
+    padding-left: 25px;
+	margin-left: 25px;
+	border-left: 3px solid #f9f9f9;
+}
+
 .tagline {
 	color:#ffae3d;
 	margin-bottom: 25px;
 }
 
 /* art in stories are put into containers */
+.container-story img, video {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	object-fit: contain;
+}
+
 .container img, video {
 	display: block;
 	margin-left: auto;
@@ -183,6 +224,12 @@ p, li {
 	width: 50%;
 }
 
+.bluesky-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .banner {
 	display: flex;
 	justify-content: center;
@@ -221,6 +268,11 @@ p, li {
 	overflow: hidden;
 	justify-content: center;
 	align-items: center;
+}
+
+.courier {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 17px;
 }
 
 /* mobile mode */

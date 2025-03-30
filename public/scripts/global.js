@@ -1,5 +1,5 @@
 // UPDATE THE BELOW VAR FOR EACH UPDATE!!
-var latestStory = 5;
+var latestStory = 6;
 var storyURL = "https://sparrowflightproject.web.app/stories/story-";
 
 function storyButtons(index) {
