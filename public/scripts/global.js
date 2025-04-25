@@ -1,5 +1,5 @@
 // UPDATE THE BELOW VAR FOR EACH UPDATE!!
-var latestStory = 6;
+var latestStory = 8;
 var storyURL = "https://sparrowflightproject.web.app/stories/story-";
 
 function storyButtons(index) {
@@ -25,4 +25,9 @@ function storyButtons(index) {
             prevButtons[i].setAttribute("href", storyURL + (index-1) + ".html");
         }
     }
+}
+
+function setLatestStory() {
+    const latestStoryLink = document.getElementsByName("latestStoryButton");
+    latestStoryLink[0].setAttribute("href", storyURL + latestStory + ".html");
 }
