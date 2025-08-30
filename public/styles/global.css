@@ -5,20 +5,29 @@
 	src: url(Ansichtkaartdemo-lGmX.otf);
 }
 
-h1 {
+h1, .h1-override {
 	font-family: Ansichtkaart;
 	font-size: 80px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	color:#ffae3d;
+	font-weight: normal;
 }
 
-a { 
+.h2-override {
+	font-weight: bold;
+}
+
+a, .col a { 
 	color:#ff6600;
 }
 
-a:hover { 
+a:hover, .col a:hover { 
 	color:#ffae3d;
+}
+
+a:active, .col a:hover { 
+	color:#e89b2f;
 }
 
 nav {
@@ -104,12 +113,11 @@ iframe {
 	color:#ffae3d;
 }
 
-body {
+body, .body-override {
 	font-family: Garamond, "EB Garamond", serif;
 	margin: auto;
 	color:#f9f9f9;
 	background-color:#18182e;
-	position: relative;
 }
 
 .container-story {
@@ -118,7 +126,7 @@ body {
 	margin: auto;
 }
 
-.container {
+.container, .container-character {
 	padding: 18px;
 	max-width: 800px;
 	margin: auto;
@@ -142,6 +150,10 @@ p, li {
 .tagline {
 	color:#ffae3d;
 	margin-bottom: 25px;
+}
+
+.profile {
+	height: 300px;
 }
 
 /* art in stories are put into containers */
@@ -292,13 +304,15 @@ p, li {
 	.story-nav {
 		width: 80%;
 	}
-
-	.portrait {
-		max-width: 100%;
-	}
-
+	
 	.spotify{
 		width: 90%;
+	}
+
+	.profile {
+		height: auto;
+		width: 100%;
+		margin-bottom: 10px;
 	}
 }
 
