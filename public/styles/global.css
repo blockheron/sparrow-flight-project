@@ -296,6 +296,14 @@ p, li {
 	.iframe-footer {
 		height: 430px;
 	}
+	
+	img, video {
+		max-width: 100%;
+	}
+
+	.portrait {
+		max-width: 100%;
+	}
 
 	/* h1 {
 		margin-top: 0;
@@ -314,6 +322,7 @@ p, li {
 		width: 100%;
 		margin-bottom: 10px;
 	}
+
 }
 
 #dark-button {
