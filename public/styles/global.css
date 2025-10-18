@@ -126,15 +126,42 @@ body, .body-override {
 	margin: auto;
 }
 
-.container, .container-character {
+.container {
 	padding: 18px;
 	max-width: 800px;
 	margin: auto;
 }
 
-p, li {
+.container-character {
+	padding: 18px;
+	max-width: 900px;
+	margin: auto;
+}
+
+.character-table {
 	font-size: 20px;
 	line-height: 1.2;
+	font-family: Garamond, "EB Garamond", serif;
+	margin-bottom: 20px;
+	color:#f9f9f9;
+	width: 100%;
+}
+
+.character-table td {
+	vertical-align: top;
+}
+
+.character-profile {
+	margin: 1000px;
+}
+
+.character-spacer {
+	margin: 50px;
+}
+
+p, li {
+	font-size: 20px;
+	line-height: 1.3;
 }
 
 .indented {
