@@ -5,6 +5,95 @@
 	src: url(Ansichtkaartdemo-lGmX.otf);
 }
 
+:root {
+	--background-color: #18182e;
+	--text-color: #f9f9f9;
+	--font: Garamond, "EB Garamond", serif;
+}
+
+.light {
+	--background-color: #ffedd9;
+	--text-color: #2e2218;
+	--font: Garamond, "EB Garamond", serif;
+}
+
+.light-dys {
+	--background-color: #ffedd9;
+	--text-color: #2e2218;
+	--font: Calibri, Helvetica, sans-serif;
+}
+
+.dark-dys {
+	--background-color: #18182e;
+	--text-color: #f9f9f9;
+	--font: Calibri, Helvetica, sans-serif;
+}
+
+body, .body-override {
+	font-family: var(--font);
+	margin: auto;
+	color :var(--text-color);
+	background-color: var(--background-color);
+}
+
+#theme-switch {
+	height: 50px;
+	width: 50px;
+	padding: 0px;
+	border-radius: 50%;
+	border: 2px solid #ff6600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 5%;
+	left: 100%;
+	transform: translateX(-190%);
+	z-index: 99999;
+	background-color: transparent;
+}
+
+#theme-switch svg {
+	fill: #ff6600
+}
+
+#theme-switch svg {
+	display: none;
+}
+
+#theme-switch svg:nth-child(1) {
+	display: block;
+}
+
+.light #theme-switch svg:nth-child(2) {
+	display: block;
+}
+
+.light #theme-switch svg:nth-child(1) {
+	display: none;
+}
+
+.light-dys #theme-switch svg:nth-child(3) {
+	display: block;
+}
+
+.light-dys #theme-switch svg:nth-child(1) {
+	display: none;
+}
+
+.dark-dys #theme-switch svg:nth-child(4) {
+	display: block;
+}
+
+.dark-dys #theme-switch svg:nth-child(1) {
+	display: none;
+}
+
+#themes-button:hover {
+	color: #ffae3d;
+	border: 2px solid #ffae3d;
+}
+
 h1, .h1-override {
 	font-family: Ansichtkaart;
 	font-size: 80px;
@@ -47,9 +136,9 @@ nav a {
 
 button {
 	background-color: transparent;
-	color: #f9f9f9;
-	font-family: Garamond, "EB Garamond", serif;
-	border: 2px solid #f9f9f9;
+	color: var(--text-color);
+	font-family: var(--font);
+	border: 2px solid var(--text-color);
 	font-size: 20px;
 	padding: 10px;
 	margin-left: 10px;
@@ -67,7 +156,6 @@ button:disabled {
   }
 
 .footer-text {
-	/* display: block; */
 	max-width: 600px;
 	margin: auto;
 }
@@ -113,13 +201,6 @@ iframe {
 	color:#ffae3d;
 }
 
-body, .body-override {
-	font-family: Garamond, "EB Garamond", serif;
-	margin: auto;
-	color:#f9f9f9;
-	background-color:#18182e;
-}
-
 .container-story {
 	padding: 18px;
 	max-width: 600px;
@@ -141,9 +222,9 @@ body, .body-override {
 .character-table {
 	font-size: 20px;
 	line-height: 1.2;
-	font-family: Garamond, "EB Garamond", serif;
+	font-family: var(--font);
 	margin-bottom: 20px;
-	color:#f9f9f9;
+	color:var(--text-color);
 	width: 100%;
 }
 
@@ -171,7 +252,7 @@ p, li {
 .block {
     padding-left: 25px;
 	margin-left: 25px;
-	border-left: 3px solid #f9f9f9;
+	border-left: 3px solid var(--text-color);
 }
 
 .tagline {
@@ -287,7 +368,6 @@ p, li {
 
 .start-story {
 	display: block;
-	/* background-image: url("../img/buttons.png"); */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: auto;
@@ -328,8 +408,6 @@ p, li {
 .slider {
   display: flex;
   overflow-x: auto;
-  /* scrollbar-width: thin; */
-  /* scrollbar-color: #ffae3d #18182e; */
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
@@ -388,10 +466,6 @@ p, li {
 		max-width: 100%;
 	}
 
-	/* h1 {
-		margin-top: 0;
-	} */
-
 	.story-nav {
 		width: 80%;
 	}
@@ -411,39 +485,10 @@ p, li {
 		margin-bottom: 20px;
 	}
 
+	#theme-switch {
+		bottom: 2%;
+		left: 100%;
+		transform: translateX(-160%);
+		background-color: var(--background-color);
+	}
 }
-
-#dark-button {
-	margin-bottom: 8px;
-	position: relative;
-	left: 100%;
-	transform: translateX(-100%);
-}
-
-.dark {
-	color:#f9f9f9;
-	background-color: #11111a;
-}
-
-/* input[type="submit"]{
-	color: white !important;
-	background-color: #eba613 !important;
-	border-color: initial !important;
-	font-family: Garamond, serif !important;
-}
-
-input[type="email"]{
-	color: initial !important;
-	background-color: initial !important;
-	font-size: initial !important;
-	margin:  initial !important;
-	font-family: Garamond, serif !important;
-}
-
-.emailoctopus-success-message{
-	font-family: Garamond, serif !important;
-}
-
-.grecaptcha-badge{
-	display: none !important;
-} */
