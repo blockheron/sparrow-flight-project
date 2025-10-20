@@ -87,18 +87,25 @@ function changeTheme() {
     changeThemeIframe();
 }
 
+let intervalID;
+function themeListener() {
+    intervalID ??= setInterval(changeThemeIframe, 1);
+}
+
 function changeThemeIframe() {
+    light = localStorage.getItem("light");
+    lightDys = localStorage.getItem("light-dys");
+    darkDys = localStorage.getItem("dark-dys");
+
     if (light === "active") {
-        console.log("lightDys");
-        enableLightDysMode();
+        document.body.classList.add("light");
     } else if (lightDys === "active") {
-        console.log("darkDys");
-        enableDarkDysMode();
+        document.body.classList.remove("light");
+        document.body.classList.add("light-dys");
     } else if (darkDys === "active") {
-        console.log("dark");
-        enableDarkMode();
+        document.body.classList.remove("light-dys");
+        document.body.classList.add("dark-dys");
     } else {
-        enableLightMode();
-        console.log("light");
+        document.body.classList.remove("dark-dys");
     }
 }

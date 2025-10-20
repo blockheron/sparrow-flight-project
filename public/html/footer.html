@@ -8,7 +8,7 @@
     <script type="text/javascript" src="../scripts/global.js"></script>
 
     <!-- <footer> -->
-    <body>
+    <body onload="themeListener()">
     <div class="footer-banner">
         <div class="footer-text" style="margin-top: 150px">
             <!-- email subscription-->
@@ -25,7 +25,7 @@
                 <p class="copyright" style="text-align: center; margin-top: 0px; font-size: smaller;">&copy; <span id="copyright-year"></span> pawseds' stories | All Rights Reserved.</p>
             </div>
             <script>
-                    document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
+                document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
             </script>
         </div>
     </div>
