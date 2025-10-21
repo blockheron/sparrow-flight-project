@@ -23,7 +23,7 @@
 	--background-color: #ffedd9;
 	--text-color: #2e2218;
 	--font: Calibri, Helvetica, sans-serif;
-	--heading: #ffae3d;
+	--heading: #ba6c52;
 }
 
 .dark-dys {
@@ -202,7 +202,7 @@ iframe {
 }
 
 .story-nav a {
-	color:var(--heading);
+	color: var(--heading);
 }
 
 .container-story {
@@ -215,6 +215,15 @@ iframe {
 	padding: 18px;
 	max-width: 800px;
 	margin: auto;
+}
+
+.spoiler {
+	text-align: center;
+	border: 1px solid var(--text-color);
+	margin-top: 15px;
+	margin-bottom: 10px;
+	padding: 15px;
+	padding-top: 0px;
 }
 
 .container-character {
