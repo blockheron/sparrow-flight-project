@@ -111,15 +111,15 @@ h1, .h1-override {
 	font-weight: bold;
 }
 
-a, .col a { 
+a, .col a, .col-sm a, .container-character a { 
 	color:#ff6600;
 }
 
-a:hover, .col a:hover { 
+a:hover, .col a:hover, .col-sm a:hover, .container-character a:hover { 
 	color:var(--heading);
 }
 
-a:active, .col a:hover { 
+a:active, .col a:active, .col-sm a:active, .container-character a:active { 
 	color:#e89b2f;
 }
 
@@ -160,12 +160,12 @@ button:disabled {
   }
 
 .footer-text {
-	max-width: 600px;
+	/* max-width: 600px; */
 	margin: auto;
 }
 
 .footer-text a {
-	margin:0px 8px;
+	margin: 0px 8px;
 	line-height: 1.8;
     display: inline-block;
 	text-decoration: none;

@@ -11,49 +11,109 @@
         <meta http-equiv='expires' content='0'>
         <meta http-equiv='pragma' content='no-cache'>
         <iframe class="iframe-header" src="html/header.html" width="100%" scrolling="no"></iframe>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     </head>
 
     <body onload="setLatestStory()">
-    <button id="theme-switch" onclick="changeTheme()">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
-    </button>
-    <div class="start-story">
-        <div style="display: flex; justify-content: center; align-items: center;"><a name="latestStoryButton"><img src="img/latestbutton.png"></a></div>
-        <p></p>
-        <div style="display: flex; justify-content: center; align-items: center;"><a href="stories/story-0.html"><img src="img/startbutton.png"></a></div>
-        <hr style="max-width: 600px; margin-top:50px; margin-bottom: 0px; border: none;">
-    </div>
+    <div class="body-override">
+        <button id="theme-switch" onclick="changeTheme()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
+        </button>
+        <div class="start-story">
+            <div style="display: flex; justify-content: center; align-items: center;"><a name="latestStoryButton"><img src="img/latestbutton.png"></a></div>
+            <p></p>
+            <div style="display: flex; justify-content: center; align-items: center;"><a href="stories/story-0.html"><img src="img/startbutton.png"></a></div>
+            <hr style="max-width: 600px; margin-top:50px; margin-bottom: 0px; border: none;">
+        </div>
 
-    <div class="container" style="text-align: center;">
-        <h2 class="tagline">Updates every Saturday/Sunday</h2>
-        <hr>
-        <p class="tagline">Don't mind the placeholder art!</p>
-        <p>To reunite with his three children after ten years, Gavrill Vorobyev sacrifices his life and sanity to hunt horrors beyond this world. Now, his family must learn to rely on each other while being haunted by past, present, and future.</p>
-        <p><i>SPARROW FLIGHT</i> is a collection of short stories and comics about the Vorobyev family. It is set in the world of <i>Delta Green: The Role-Playing Game</i> where cosmic horrors exist in the shadows of our world, and threaten the fragile, but deeply cherished bond between Hrodwyn, Merethel, Hygd, and their father Gavrill. But despite trying to overcome the unspoken trauma of living through war, fleeing to a new country, and being forcefully separated for ten years, the family knows their reunion can end in death, or worse.</p>
-        <p>This collection is blend of historical war fiction, slice-of-life family drama, and psychological horror, with sparks of hurt/comfort, hope, and wholesomeness. It also follows an Delta Green campaign called <i>Armageddon</i>, written and run by Mint and ideated by TheRoyalZealot. My player character, Gavrill Vorobyev, is known as Agent HROTHGAR in Helvetia Limited: a powerful but quickly-crumbling international organisation dedicated to eliminating the Unnatural in the dark.</p>
-        <p>Stories are written as the game progresses. It started in 23 February 2024. It is still ongoing. The Vorobyevs' fate remains unknown.</p>
+        <div class="container-character">
+            <h2 class="h2-override tagline" style="text-align: center; margin-bottom: 10px;">Currently on hiatus!</h2>
+            <p class="tagline" style="text-align: center;">Web-building is in progress...</p>
+            <hr style="margin-bottom: 30px;">
+            <p style="text-align: center;">When Gavrill Vorobyev, a single father of three, is offered a chance to reunite with his children after ten years, he takes it. The catch? He must now live a double life as Agent HROTHGAR, a mercenary for the secret organisation Helvetia that's dedicated to tracking down cosmic horrors beyond this world. </p>
+            <p style="text-align: center;">Through betrayal and deceit, heartbreak and loss, Gavrill must be the best father he can be to 19-year-old Hrodwyn, 16-year-old Merethel, and 12-year-old Hygd. But the more he learns about Helvetia's secrets, the more the line between family and work blurs. And when his past, present, and future begin to haunt his family, it may take more than his life and sanity to keep them safe.</p>
 
-        <hr>
-        <p class="tagline">Project playlist:</p>
-        <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/playlist/1l79AYeqd03fGmTYd9Bp1C?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <p style="margin-top: 30px;">Started in: 8 September 2024</p>
-        <table style="margin: auto;">
-            <tbody>
-            <tr>
-            <td style="width: 40%; height: 5%;">
-            <p style="text-align: center;">Global word count: 21,882</p><p style="text-align: center;">Total short stories: 6</p>
-            </td>
-            <td style="width: 40%; height: 5%;">
-            <p style="text-align: center;">Global comic pages: 31</p><p style="text-align: center;">Total comics: 3</p>
-            </td>
-            </tr>
-            </tbody>
-        </table>
+            <div class="row" style="margin-top: 60px;">
+                <div class="col-md-8">
+                    <h2 class="h2-override" style="margin-bottom: 15px;">What this project has:</h2>
+                    <ul style="line-height: 150%">
+                        <li style="color: var(--heading);"><b>Short stories, Comics, and Light Novels every week!</b></li>
+                        <li style="margin-top: 6px;">Character-driven arcs woven into an overarching mystery</li>
+                        <li style="margin-top: 6px;">Funny, wholesome slice-of-life family moments</li>
+                        <li style="margin-top: 6px;">Historical war fiction and romance</li>
+                        <li style="margin-top: 6px;">Violence, dark themes, and psychological horror</li>
+                        <li style="margin-top: 6px;">Mental health issues and awareness across generations</li>
+                        <li style="margin-top: 6px;">Hurt/Comfort, bittersweet hope</li>
+                        <li style="margin-top: 6px;">TTRPG elements: influenced by game mechanics and events, has improvised and collaborative storytelling</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img style="max-width: 100%;" src="https://gallery.eocampaign1.com/45fed8ce-b513-11ef-8295-2d7ea4f395ef%2Fmedia-manager%2F1740070245637-tumblr_36fa5c6fb3dfd7aa6617248e59443305_89184237_2048.jpg" alt="SPARROW FLIGHT cover"/>
+                </div>
+            </div>
+        </div>
 
-        <p>If you feel a sensitive topic was mishandled or if an additional content warning is needed, do not hesitate to contact me. I aim to write from a place of empathy and respect, not of ignorance and glamour; and my limited experience and knowledge only gives me more room to learn and grow.</p>
+        <div style="padding: 18px; margin: auto; max-width: 1150px; margin-top: 30px;">
+            <div class="row" style="text-align: center;">
+                <div class="col-sm">
+                    <p>Want to see all the stories so far?<br />Check out the <a href="/timeline/index.html">Timeline</a> page!</p>
+                    <img style="max-width: 100%;" src="img/intro-merlin.png">
+                </div>
+                <div class="col-sm">
+                    <p>Not sure if this story's for you?<br />Visit the <a href="/content_warnings/index.html">Content Warnings</a> page.</p>
+                    <img style="max-width: 100%;" src="img/intro-merlin.png">
+                </div>
+                <div class="col-sm">
+                    <p>Feel like looking at art?<br />Check out the <a href="/gallery/index.html">Gallery</a> page!</p>
+                    <img style="max-width: 100%;" src="img/intro-merlin.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="container-character" style="text-align: center;">
+            <hr style="margin-bottom: 30px;">
+            <h2 class="h2-override">Subscribe to the newsletter for weekly stories!<br></h2>
+            <div style="max-width: 100%; display: flex; text-align: center; align-items: center; justify-content: center; margin-bottom: 15px;">
+                <script async src="https://eocampaign1.com/form/92356fce-b517-11ef-91c3-ddf4c98ab003.js" data-form="92356fce-b517-11ef-91c3-ddf4c98ab003"></script>
+            </div>
+            <p>Want <b class="tagline">exclusive content</b> like early access, bonus comics, and behind-the-scenes work? Or do you want to drop a simple thank-you tip? Check out my Ko-Fi!</p>
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Sparrow Flight on Ko-fi', '#48387B', 'X8X41M4V72');kofiwidget2.draw();</script> 
+            <p style="margin-top: 20px;">For light mode, dyslexia support, and dark mode, press the circular button on the bottom right of your screen.</p>
+
+            <hr style="margin-top: 40px; margin-bottom: 40px;">
+
+                <h2 class="h2-override">Ever since 8 September 2024...</h2>
+                <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+                    <div class="col-sm">
+                        <p>Global word count:<br />21,882</p>
+                    </div>
+                    <div class="col-sm">
+                        <p>Total short stories:<br />6</p>
+                    </div>
+                    <div class="col-sm">
+                        <p>Global comic pages:<br />31</p>
+                    </div>
+                    <div class="col-sm">
+                        <p>Total comics:<br />3</p>
+                    </div>
+                </div>
+            <p><b>Project playlist</b></p>
+            <div style="max-width: 600px; margin: auto; margin-bottom: 40px;">
+                <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/playlist/1l79AYeqd03fGmTYd9Bp1C?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <p><i>SPARROW FLIGHT</i> is based on an investigative cosmic horror TTRPG campaign where Gavrill is my player character. The campaign, <i>Armageddon</i>, was ideated by <a href="https://www.tumblr.com/theroyalzealot">TheRoyalZealot</a> but is written and ran by <a href="https://www.tumblr.com/mintrhine">Mint</a> using the <i>Delta Green</i> system. It started in 23 February 2024 and is still ongoing. <i>SPARROW FLIGHT</i> also features other people's characters and writing, which are all credited on stories they appear in and on the <a href="/characters/index.html">Characters</a> page.</p>
+            <p>If you feel a sensitive topic was mishandled or if an additional content warning is needed, do not hesitate to contact me below. I aim to write from a place of empathy and respect, not of ignorance and glamour; my limited experience and knowledge only gives me more room to learn and grow.</p>
+
+            <hr style="margin-top: 40px; margin-bottom: 40px;">
+            <div style="text-align: left;">
+                <h2 class="h2-override">About the Storyteller</h2>
+                <p>Hey there! I'm known online as pawseds. I like telling stories about the little brainworms in my head I call my characters. I also have too many hobbies, some of which end up being the medium in which I tell my little brainworm stories. Thanks for taking the time to read all the way here! I hope you'll enjoy the Vorobyevs' story as much as I do.</p>
+                <p>You can see my other art and writing on my <a href="https://pawseds-stories.web.app/" target="_blank">personal site</a> (and subscribe to its newsletter while you're at it.) You can contact me by email at reedfoxtrot@gmail.com or message me on <a href="http://instagram.com/pawseds/" target="_blank">Instagram</a>, <a href="https://bsky.app/profile/pawseds.bsky.social" target="_blank">Bluesky</a>, or <a href="https://www.tumblr.com/blog/sparrow-flight" target="_blank">Tumblr</a>.</p>
+            </div>
+        </div>
     </div>
     </body>
 
@@ -61,5 +121,6 @@
     <footer>
         <iframe class="iframe-footer" src="html/footer.html" width="100%" height="325px" scrolling="no"></iframe>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script type="text/javascript" src="scripts/global.js"></script>
 </html>
