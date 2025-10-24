@@ -277,6 +277,15 @@ p, li {
 	height: 300px;
 }
 
+.playlist-order li {
+	margin-top: 20px;
+}
+
+.playlist-order p {
+	margin-top: 0px;
+	font-size: 17px;
+}
+
 /* art in stories are put into containers */
 .container-story img, video {
 	display: block;

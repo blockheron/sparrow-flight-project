@@ -23,55 +23,73 @@
 
     <div class="container">
         <h1 style="text-align: center">TIMELINE</h1>
-        <p style="text-align: center">This is a list of all of Sparrow Flight's stories so far. <b>Written order</b> displays stories in the order they were written in. This is the default order for story navigation. <b>Narrative order</b> displays stories in the order of in-story chronology.</b></u></p>
-        <div style="display: block; margin-left: auto; margin-right: auto; margin-top: 30px; text-align: center">
+        <p style="text-align: center;">This is a list of all of Sparrow Flight's stories so far. <b>Written order</b> displays stories largely in the order they were written. This is the default order for story navigation. <b>Narrative order</b> displays stories in the order of in-story chronology.</b> <b>Playlist order</b> displays stories with their associated songs.</b></p>
+        <div style="display: block; margin-left: auto; margin-right: auto; text-align: center">
             <button id="showWrittenDiv" onclick="writtenListener()">Written order</button>
             <button id="showNarrativeDiv" onclick="narrativeListener()">Narrative order</button>
+            <button id="showPlaylistDiv" onclick="playlistListener()" style="margin-top: 15px;">Playlist order</button>
         </div>
     </div>
 
-    <div class="container-story" style="margin-top: -20px;">
-        <!-- thank u ssss lmao -->
+    <div class="container-story" style="margin-top: -15px;">
         <script>
-            let writtenClicked = false;
+            let writtenClicked = true;
             let narrativeClicked = false;
+            let playlistClicked = false;
             
             function writtenListener() {
                 writtenClicked = true;
+                narrativeClicked = false;
+                playlistClicked = false;
                 changeTimeline();
             }
 
             function narrativeListener() {
                 writtenClicked = false;
-                changeTimeline()
+                narrativeClicked = true;
+                playlistClicked = false;
+                changeTimeline();
+            }
+
+            function playlistListener() {
+                writtenClicked = false;
+                narrativeClicked = false;
+                playlistClicked = true;
+                changeTimeline();
             }
 
             function changeTimeline() {
-                var timeline1 = document.getElementById("writtenDiv");
-                var timeline2 = document.getElementById("narrativeDiv");
-                var butt1 = document.getElementById("showWrittenDiv");
-                var butt2 = document.getElementById("showNarrativeDiv");
+                const writtenTimeline = document.getElementById("writtenDiv");
+                const narrativeTimeline = document.getElementById("narrativeDiv");
+                const playlistTimeline = document.getElementById("playlistDiv");
+                const writtenButt = document.getElementById("showWrittenDiv");
+                const narrativeButt = document.getElementById("showNarrativeDiv");
+                const playlistButt = document.getElementById("showPlaylisteDiv");
                 
-                var currShowingAdv = 1;	
-                if ( document.getElementById("writtenDiv").style.display == "none") currShowingAdv = 2;
+                // var currShowingAdv = 1;	
+                // if (document.getElementById("writtenDiv").style.display == "none" && document.getElementById("playlistDiv").style.display == "none") {
+                //     currShowingAdv = 2;
+                // }
                     
-                // if current showing archive is written, hide the div for written and show the div for narrative
-                if (currShowingAdv == "1" && !writtenClicked) {
-                    butt1.disabled = false;
-                    butt2.disabled = true;
-                    timeline1.style.display = "none";
-                    timeline2.style.display = "block";
-                    // butt1.style.opacity = "0.3";
-                    // butt2.style.opacity = "1";
+                if (writtenClicked) {
+                    // writtenButt.disabled = false;
+                    // narrativeButt.disabled = true;
+                    // playlistButt = true;
+                    writtenTimeline.style.display = "block";
+                    narrativeTimeline.style.display = "none";
+                    playlistTimeline.style.display = "none";
                     
-                } else if (currShowingAdv == "2" && writtenClicked) {
-                    butt1.disabled = true;
-                    butt2.disabled = false;
-                    timeline1.style.display = "block";
-                    timeline2.style.display = "none";
-                    // butt1.style.opacity = "1";
-                    // butt2.style.opacity = "0.3";
+                } else if (narrativeClicked) {
+                    // writtenButt.disabled = true;
+                    // narrativeButt.disabled = false;
+                    writtenTimeline.style.display = "none";
+                    narrativeTimeline.style.display = "block";
+                    playlistTimeline.style.display = "none";
                     
+                } else if (playlistClicked) {
+                    writtenTimeline.style.display = "none";
+                    narrativeTimeline.style.display = "none";
+                    playlistTimeline.style.display = "block";
                 }
             }
         </script>
@@ -79,7 +97,7 @@
         <!-- WRITTEN ORDER -->
         <div id="writtenDiv" style="display: block">
             <ol>
-                <li>Prologue: <a href="../stories/story-0.html">New Year's Wishes</a></li>
+                <p style="margin-bottom: 0; margin-left: 0; padding: 0;">Prologue: <a href="../stories/story-0.html">New Year's Wishes</a></p>
                 <li><a href="../stories/story-1.html">Here Now</a></li>
                 <li><a href="../stories/story-2.html">Rough Beginnings</a></li>
                 <li><a href="../stories/story-3.html">Lost at Shoppers</a></li>
@@ -99,7 +117,7 @@
             <h2>Life in Canada</h2>
             <p class="tagline">2005-2016</p> -->
 
-            <h2>Helvetia Ltd: Apocalypse Rising begins</h2>
+            <h2>Helvetia Ltd: Armageddon begins</h2>
             <p class="tagline">2017</p>
             <ul>
             <li>1 Jan 2017 - <a href="../stories/story-0.html">New Year's Wishes</a></li>
@@ -120,6 +138,54 @@
 
             <!-- <h2>Operation FUMIGATION</h2>
             <p class="tagline">13 May 2017</p> -->
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: -40px;">
+        <!-- PLAYLIST ORDER -->
+        <div id="playlistDiv" style="display: none;">
+            <p style="text-align: center;">Each song in Sparrow Flight's playlist corresponds to a plot beat. These songs are sorted in chronological order, and so tell the story of the Vorobyevs from start to end through music.</p>
+            <p style="text-align: center;">Note: As the campaign Armageddon is still ongoing, only songs that correspond to an event that has already happened are listed below.</p>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1l79AYeqd03fGmTYd9Bp1C?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <ol class="playlist-order">
+                <li>The Best Is Yet To Come - Frank Sinatra, Count Basie</li>
+                <li>Save the Last Dance for Me - Michael Bublé</li>
+                <li>That Would Be Enough - Phillipa Soo, Lin-Manuel Miranda</li>
+                <li>Try a Little Tenderness - Michael Bublé</li>
+                <li>You and I - Michael Bublé</li>
+                <li>Bishops Knife Trick - Fall Out Boy</li>
+                <li>Forever Now - Michael Bublé</li>
+                <li>Home - Michael Bublé</li>
+                <li>The Bird Song - Noah Floersch</li>
+                <li>Edmonton - PUP</li>
+                <li>Sibling Rivalry - PUP</li>
+                <li>So Big / So Small - Rachel Bay Jones: <a href="../stories/story-1.html">Here Now</a><br /><p>As Gavrill recalls the horrors his children had to go through, he promises that he'll never let anything tear them apart again.</p></li>
+                <li>Mas Que Nada - Sérgio Mendes, Gracinha Leporace: <a href="../stories/story-6.html">Operation STATIC SHOCK</a><br /><p>This operation takes place in Rio. I love the film Rio. This song plays as Blu enters Rio, so of course I've mentally designated it as this operation's theme.</p></li>
+                <li>KICK BACK - Kenshi Yonezu: <a href="../stories/story-6.html">Operation STATIC SHOCK</a><br /><p>The song the previous GM chose as this operation's theme.</p></li>
+                <li>Non, je ne regrette rien - Édith Piaf</li>
+                <li>The Mighty Fall - Fall Out Boy, Big Sean</li>
+                <li>vs The Heat Death of the Universe - The Narcissist Cookbook</li>
+                <li>Virtual Insanity - Jamiroquai</li>
+                <li>CHAINSAW BLOOD - Vaundy</li>
+                <li>Put Your Hands on Me - Greek Fire</li>
+                <li>Get Dumber - PUP, Jeff Rosenstock</li>
+                <li>Time Left - ZUTOMAYO</li>
+                <li>Hook, Line & Sinker - Royal Blood</li>
+                <li>HOW 2 GET AWAY WITH MURDER - South Arcade</li>
+                <li>Scherzo - TwoSet Violin</li>
+                <li>The Coast - PUP</li>
+                <li>HAWATARI NIOKU CENTI - MAXIMUM THE HORMONE</li>
+                <li>The Chain - Fleetwood Mac</li>
+                <li>Przekleństwo Milleheaven - Katarzyna Groniec</li>
+                <li>INFERNO - KILL KROOK, Sinizter</li>
+                <li>Lone Digger - Caravan Palace</li>
+                <li>World's End Valentine (From "Omori") - FamilyJules</li>
+                <li>Who Is She ? - I Monster</li>
+                <li>Sparrow - St. Vincent</li>
+                <li>Love Song - Tatsuya Kitani, Eve</li>
+                <li>Rule #47 - The Birds Are Plotting</li>
+            </ol>
         </div>
     </div>
     </body>
