@@ -389,6 +389,7 @@ p, li {
 
 .start-story {
 	display: block;
+	background-image: url("../img/buttons.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: auto;
