@@ -261,6 +261,11 @@ p, li {
     text-indent: 50px;
 }
 
+.indented-block {
+	padding-left: 25px;
+	margin-left: 25px;
+}
+
 .block {
     padding-left: 25px;
 	margin-left: 25px;
