@@ -1,5 +1,5 @@
 // UPDATE THE BELOW VAR FOR EACH UPDATE!!
-var latestStory = 13;
+var latestStory = 14;
 var storyURL = "story-";
 
 function storyButtons(index) {
