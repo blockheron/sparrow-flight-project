@@ -120,3 +120,56 @@ function changeThemeIframe() {
             break;
     }
 }
+
+// SPOILER
+let showWarnings = false;
+let showStory = false;
+let showSummary = false;
+
+function clickShowWarnings() {
+    const warningButton = document.getElementById("warning-button");
+    const warning = document.getElementById("warning");
+    if (!showWarnings) {
+        warning.style.display = "block";
+        warningButton.innerText = "Hide Warnings"
+        showWarnings = true;
+        console.log("show warning");
+    } else {
+        warning.style.display = "none";
+        warningButton.innerText = "Show Warnings"
+        showWarnings = false;
+        console.log("hide warning");
+    }
+}
+
+function clickShowStory() {
+    const storyButton = document.getElementById("story-button");
+    const story = document.getElementById("story");
+    if (!showStory) {
+        story.style.display = "block";
+        storyButton.innerText = "Hide Story"
+        showStory = true;
+        console.log("show story");
+    } else {
+        story.style.display = "none";
+        storyButton.innerText = "Show Story"
+        showStory = false;
+        console.log("hide story");
+    }
+}
+
+function clickShowSummary() {
+    const summaryButton = document.getElementById("summary-button");
+    const summary = document.getElementById("summary");
+    if (!showSummary) {
+        summary.style.display = "block";
+        summaryButton.innerText = "Hide summary"
+        showSummary = true;
+        console.log("show summary");
+    } else {
+        summary.style.display = "none";
+        summaryButton.innerText = "Show summary"
+        showSummary = false;
+        console.log("hide summary");
+    }
+}
