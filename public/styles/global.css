@@ -55,6 +55,7 @@ body, .body-override {
 	transform: translateX(-190%);
 	z-index: 99999;
 	background-color: transparent;
+	cursor: pointer;
 }
 
 #theme-switch svg {
@@ -123,6 +124,18 @@ a:active, .col a:active, .col-sm a:active, .container-character a:active {
 	color:#e89b2f;
 }
 
+a, .col a, .col-sm a, .container-story a { 
+	color:#ff6600;
+}
+
+a:hover, .col a:hover, .col-sm a:hover, .container-story a:hover { 
+	color:var(--heading);
+}
+
+a:active, .col a:active, .col-sm a:active, .container-story a:active { 
+	color:#e89b2f;
+}
+
 nav {
 	margin-top:20px;
     text-align: center;
@@ -138,7 +151,7 @@ nav a {
 	line-height: 1.5;
 }
 
-button {
+.chapters-button{
 	background-color: transparent;
 	color: var(--text-color);
 	font-family: var(--font);
@@ -147,6 +160,7 @@ button {
 	padding: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
+	cursor: pointer;
 }
 
 button:hover {

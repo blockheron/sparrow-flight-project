@@ -11,6 +11,7 @@
         <meta http-equiv='expires' content='0'>
         <meta http-equiv='pragma' content='no-cache'>
         <iframe class="iframe-header" src="../html/header.html" width="100%" scrolling="no"></iframe>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     </head>
 
     <!-- Google tag (gtag.js) -->
@@ -31,151 +32,97 @@
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
     </button>
 
-    <div class="container">
-        <h1 style="text-align: center">CHAPTERS</h1>
-        <p style="text-align: center;">This is a list of all of Sparrow Flight's stories so far. <b>Reading order</b> displays stories in their intended reading order. This is the default order for story navigation. It is also largely the order stories were made in. <b>Narrative order</b> displays stories in the order of in-story chronology.</b> <b>Playlist order</b> displays stories with their associated songs.</b></p>
-        <div style="display: block; margin-left: auto; margin-right: auto; text-align: center">
-            <button id="showWrittenDiv" onclick="writtenListener()">Reading order</button>
-            <button id="showNarrativeDiv" onclick="narrativeListener()">Narrative order</button>
-            <button id="showPlaylistDiv" onclick="playlistListener()" style="margin-top: 15px;">Playlist order</button>
-        </div>
-    </div>
-
-    <div class="container-story" style="margin-top: -15px;">
-        <script>
-            let writtenClicked = true;
-            let narrativeClicked = false;
-            let playlistClicked = false;
-            
-            function writtenListener() {
-                writtenClicked = true;
-                narrativeClicked = false;
-                playlistClicked = false;
-                changeTimeline();
-            }
-
-            function narrativeListener() {
-                writtenClicked = false;
-                narrativeClicked = true;
-                playlistClicked = false;
-                changeTimeline();
-            }
-
-            function playlistListener() {
-                writtenClicked = false;
-                narrativeClicked = false;
-                playlistClicked = true;
-                changeTimeline();
-            }
-
-            function changeTimeline() {
-                const writtenTimeline = document.getElementById("writtenDiv");
-                const narrativeTimeline = document.getElementById("narrativeDiv");
-                const playlistTimeline = document.getElementById("playlistDiv");
-                const writtenButt = document.getElementById("showWrittenDiv");
-                const narrativeButt = document.getElementById("showNarrativeDiv");
-                const playlistButt = document.getElementById("showPlaylisteDiv");
-                
-                // var currShowingAdv = 1;	
-                // if (document.getElementById("writtenDiv").style.display == "none" && document.getElementById("playlistDiv").style.display == "none") {
-                //     currShowingAdv = 2;
-                // }
-                    
-                if (writtenClicked) {
-                    // writtenButt.disabled = false;
-                    // narrativeButt.disabled = true;
-                    // playlistButt = true;
-                    writtenTimeline.style.display = "block";
-                    narrativeTimeline.style.display = "none";
-                    playlistTimeline.style.display = "none";
-                    
-                } else if (narrativeClicked) {
-                    // writtenButt.disabled = true;
-                    // narrativeButt.disabled = false;
-                    writtenTimeline.style.display = "none";
-                    narrativeTimeline.style.display = "block";
-                    playlistTimeline.style.display = "none";
-                    
-                } else if (playlistClicked) {
-                    writtenTimeline.style.display = "none";
-                    narrativeTimeline.style.display = "none";
-                    playlistTimeline.style.display = "block";
-                }
-            }
-        </script>
-
-        <!-- WRITTEN ORDER -->
-        <div id="writtenDiv" style="display: block">
-            <h2 style="text-align: center;">Chapter 1</h2>
-            <ol>
-                <p style="margin-bottom: 0; margin-left: 0; padding: 0;">Prologue: <a href="../stories/story-0.html">New Year's Wishes</a></p>
-                <li><a href="../stories/story-1.html">Here Now</a></li>
-                <li><a href="../stories/story-2.html">Rough Beginnings</a></li>
-                <li><a href="../stories/story-3.html">Lost at Shoppers</a></li>
-                <li><a href="../stories/story-4.html">Final Call for HV413</a></li>
-                <li><a href="../stories/story-5.html">The Ugly Duckling</a></li>
-                <li><a href="../stories/story-6.html">Operation STATIC SHOCK</a></li>
-                <li><a href="../stories/story-7.html">Where the Sun Divides</a></li>
-                <li><a href="../stories/story-8.html">Let's Talk, Father-to-Father</a></li>
-                <li><a href="../stories/story-9.html">Wish Upon a Star</a></li>
-                <li><a href="../stories/story-10.html">Newton's Third Law</a></li>
-                <li><a href="../stories/story-11.html">Happy Birthday, Leyna Morozov</a></li>
-                <li><a href="../stories/story-12.html">I, Merlin</a></li>
-                <li><a href="../stories/story-13.html">Meeting Uncle Gavrill</a></li>
-                <li><a href="../stories/story-14.html">Therapy Session</a></li>
-                <li><a href="../stories/story-15.html">Nicknames</a></li>
-            </ol>
+    <div class="body-override">
+        <div class="container-character">
+            <h1 class="h1-override" style="text-align: center">CHAPTERS</h1>
+            <p style="text-align: center;">This is a list of all of Sparrow Flight's stories so far. <b>Reading order</b> displays stories in their intended reading order. This is the default order for story navigation. It is also largely the order stories were made in. <b>Narrative order</b> displays stories in the order of in-story chronology.</b> <b>Playlist order</b> displays stories with their associated songs.</b></p>
+            <div style="display: block; margin-left: auto; margin-right: auto; text-align: center">
+                <button class="chapters-button" id="showWrittenDiv" onclick="writtenListener()">Reading order</button>
+                <button class="chapters-button" id="showNarrativeDiv" onclick="narrativeListener()">Narrative order</button>
+                <button class="chapters-button" id="showPlaylistDiv" onclick="playlistListener()" style="margin-top: 15px;">Playlist order</button>
+            </div>
         </div>
 
-        <!-- NARRATIVE ORDER -->
-        <div id="narrativeDiv" style="display: none">
-            <h2>To Look for Wind in a Field</h2>
-            <p class="tagline">1983-2005</p>
-            <ul>
-                <li>28 September 1994 - <a href="../stories/story-12.html">I, Merlin</a></li>
-                <li>19 Januart 1995 - <a href="../stories/story-15.html">Nicknames</a></li>
-            </ul>
+        <div>
+            <!-- WRITTEN ORDER -->
+            <div class="container-character" id="writtenDiv" style="display: block;">
+                <div class="row justify-content-center">
+                    <div class="col-sm" style="margin-bottom: 15px;">
+                        <img src="../img/book-1-cover.png" style="max-width: 100%;">
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col">
+                        <h2 class="h2-override" style="text-align: center;">Chapter 1</h2>
+                        <hr>
+                        <ol>
+                            <p style="margin-bottom: 0; margin-left: 0; padding: 0;">Prologue: <a href="../stories/story-0.html">New Year's Wishes</a></p>
+                            <li><a href="../stories/story-1.html">Here Now</a></li>
+                            <li><a href="../stories/story-2.html">Rough Beginnings</a></li>
+                            <li><a href="../stories/story-3.html">Lost at Shoppers</a></li>
+                            <li><a href="../stories/story-4.html">Final Call for HV413</a></li>
+                            <li><a href="../stories/story-5.html">The Ugly Duckling</a></li>
+                            <li><a href="../stories/story-6.html">Operation STATIC SHOCK</a></li>
+                            <li><a href="../stories/story-7.html">Where the Sun Divides</a></li>
+                            <li><a href="../stories/story-8.html">Let's Talk, Father-to-Father</a></li>
+                            <li><a href="../stories/story-9.html">Wish Upon a Star</a></li>
+                            <li><a href="../stories/story-10.html">Newton's Third Law</a></li>
+                            <li><a href="../stories/story-11.html">Happy Birthday, Leyna Morozov</a></li>
+                            <li><a href="../stories/story-12.html">I, Merlin</a></li>
+                            <li><a href="../stories/story-13.html">Meeting Uncle Gavrill</a></li>
+                            <li><a href="../stories/story-14.html">Therapy Session</a></li>
+                            <li><a href="../stories/story-15.html">Nicknames</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Life in Canada</h2>
-            <p class="tagline">2005-2016</p>
-            <ul>
-                <li>31 Dec 2016 - <a href="../stories/story-9.html">Wish Upon a Star</a></li>
-            </ul>
+            <!-- NARRATIVE ORDER -->
+            <div class="container-story" id="narrativeDiv" style="display: none">
+                <h2 class="h2-override">To Look for Wind in a Field</h2>
+                <p class="tagline">1983-2005</p>
+                <ul>
+                    <li>28 September 1994 - <a href="../stories/story-12.html">I, Merlin</a></li>
+                    <li>19 Januart 1995 - <a href="../stories/story-15.html">Nicknames</a></li>
+                </ul>
 
-            <h2>Helvetia Ltd: Armageddon begins</h2>
-            <p class="tagline">2017</p>
-            <ul>
-                <li>1 Jan 2017 - <a href="../stories/story-0.html">New Year's Wishes</a></li>
-                <li>7 Jan 2017 - <a href="../stories/story-2.html">Rough Beginnings</a></li>
-                <li>4 Feb 2017 - <a href="../stories/story-1.html">Here Now</a></li>
-                <li>5 Feb 2017 - <a href="../stories/story-3.html">Lost at Shoppers</a></li>
-                <li>12 Feb 2017 - <a href="../stories/story-4.html">Final Call for HV413</a></li>
-                <li>13 Feb 2017 - <a href="../stories/story-10.html">Newton's Third Law</a></li>
-                <li>13 Feb 2017 - <a href="../stories/story-5.html">The Ugly Duckling</a></li>
-            </ul>
+                <h2 class="h2-override">Life in Canada</h2>
+                <p class="tagline">2005-2016</p>
+                <ul>
+                    <li>31 Dec 2016 - <a href="../stories/story-9.html">Wish Upon a Star</a></li>
+                </ul>
 
-            <h2>Operation STATIC SHOCK</h2>
-            <p class="tagline">13 February 2017</p>
-            <ul>
-                <li>13 Feb 2017 - <a href="../stories/story-6.html">Operation STATIC SHOCK</a></li>
-                <li>13 Feb 2017 - <a href="../stories/story-7.html">Where the Sun Divides</a></li>
-                <li>14 Feb 2017 - <a href="../stories/story-8.html">Let's Talk, Father-to-Father</a></li>
-                <li>4 Mar 2017 - <a href="../stories/story-11.html">Happy Birthday, Leyna Morozov</a></li>
-                <li>11 Mar 2017 - <a href="../stories/story-13.html">Meeting Uncle Gavrill</a></li>
-                <li>25 Apr 2017 - <a href="../stories/story-14.html">Therapy Session</a></li>
-            </ul>
+                <h2 class="h2-override">Helvetia Ltd: Armageddon begins</h2>
+                <p class="tagline">2017</p>
+                <ul>
+                    <li>1 Jan 2017 - <a href="../stories/story-0.html">New Year's Wishes</a></li>
+                    <li>7 Jan 2017 - <a href="../stories/story-2.html">Rough Beginnings</a></li>
+                    <li>4 Feb 2017 - <a href="../stories/story-1.html">Here Now</a></li>
+                    <li>5 Feb 2017 - <a href="../stories/story-3.html">Lost at Shoppers</a></li>
+                    <li>12 Feb 2017 - <a href="../stories/story-4.html">Final Call for HV413</a></li>
+                    <li>13 Feb 2017 - <a href="../stories/story-10.html">Newton's Third Law</a></li>
+                    <li>13 Feb 2017 - <a href="../stories/story-5.html">The Ugly Duckling</a></li>
+                </ul>
 
-            <!-- <h2>Operation FUMIGATION</h2>
-            <p class="tagline">13 May 2017</p> -->
+                <h2 class="h2-override">Operation STATIC SHOCK</h2>
+                <p class="tagline">13 February 2017</p>
+                <ul>
+                    <li>13 Feb 2017 - <a href="../stories/story-6.html">Operation STATIC SHOCK</a></li>
+                    <li>13 Feb 2017 - <a href="../stories/story-7.html">Where the Sun Divides</a></li>
+                    <li>14 Feb 2017 - <a href="../stories/story-8.html">Let's Talk, Father-to-Father</a></li>
+                    <li>4 Mar 2017 - <a href="../stories/story-11.html">Happy Birthday, Leyna Morozov</a></li>
+                    <li>11 Mar 2017 - <a href="../stories/story-13.html">Meeting Uncle Gavrill</a></li>
+                    <li>25 Apr 2017 - <a href="../stories/story-14.html">Therapy Session</a></li>
+                </ul>
+
+                <!-- <h2 class="h2-override">Operation FUMIGATION</h2>
+                <p class="tagline">13 May 2017</p> -->
+            </div>
         </div>
-    </div>
 
-    <!-- PLAYLIST ORDER -->
-    <div class="container" style="margin-top: -40px;">
-        <div id="playlistDiv" style="display: none;">
+        <!-- PLAYLIST ORDER -->
+        <div class="container-character" id="playlistDiv" style="display: none;">
             <p style="text-align: center;">Each song in Sparrow Flight's playlist corresponds to a plot beat. These songs are sorted in chronological order, and so tell the story of the Vorobyevs from start to end through music.</p>
             <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1l79AYeqd03fGmTYd9Bp1C?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
             <ol class="playlist-order">
                 <li>Pine Point - PUP</li>
                 <li>The Best Is Yet To Come - Frank Sinatra, Count Basie</li>
@@ -227,5 +174,57 @@
     <footer>
         <iframe class="iframe-footer" src="../html/footer.html" width="100%" height="325px" scrolling="no"></iframe>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../scripts/global.js"></script>
+    <script>
+        let writtenClicked = true;
+        let narrativeClicked = false;
+        let playlistClicked = false;
+        
+        function writtenListener() {
+            writtenClicked = true;
+            narrativeClicked = false;
+            playlistClicked = false;
+            changeTimeline();
+        }
+
+        function narrativeListener() {
+            writtenClicked = false;
+            narrativeClicked = true;
+            playlistClicked = false;
+            changeTimeline();
+        }
+
+        function playlistListener() {
+            writtenClicked = false;
+            narrativeClicked = false;
+            playlistClicked = true;
+            changeTimeline();
+        }
+
+        function changeTimeline() {
+            const writtenTimeline = document.getElementById("writtenDiv");
+            const narrativeTimeline = document.getElementById("narrativeDiv");
+            const playlistTimeline = document.getElementById("playlistDiv");
+            const writtenButt = document.getElementById("showWrittenDiv");
+            const narrativeButt = document.getElementById("showNarrativeDiv");
+            const playlistButt = document.getElementById("showPlaylisteDiv");
+                
+            if (writtenClicked) {
+                writtenTimeline.style.display = "block";
+                narrativeTimeline.style.display = "none";
+                playlistTimeline.style.display = "none";
+                
+            } else if (narrativeClicked) {
+                writtenTimeline.style.display = "none";
+                narrativeTimeline.style.display = "block";
+                playlistTimeline.style.display = "none";
+                
+            } else if (playlistClicked) {
+                writtenTimeline.style.display = "none";
+                narrativeTimeline.style.display = "none";
+                playlistTimeline.style.display = "block";
+            }
+        }
+    </script>
 </html>
